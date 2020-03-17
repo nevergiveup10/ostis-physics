@@ -1,0 +1,114 @@
+sc_node_not_relation -> struct_Triangle_A_B_C;;
+sc_node_not_relation -> struct_Circle_A_B;;
+sc_node_not_relation -> concept_triangle; concept_circle; segment_AB; segment_AC; segment_BC;;
+concept_triangle => nrel_main_idtf: [треугольник] (*<-lang_ru;;*);;
+concept_circle => nrel_main_idtf: [окружность] (*<-lang_ru;;*);;
+struct_Triangle_A_B_C => nrel_main_idtf: [Triangle ABC] (*<-lang_en;;*);;
+struct_Circle_A_B => nrel_main_idtf: [Circle AB] (*<-lang_en;;*);;
+geometry -> concept_triangle;;
+geometry -> concept_circle; segment_AB; segment_AC; segment_BC; struct_Triangle_A_B_C; struct_Circle_A_B;;
+concept_triangle -> struct_Triangle_A_B_C;;
+concept_circle -> struct_Circle_A_B;;
+concept_segment -> segment_AB; segment_AC; segment_BC;;
+
+struct_Triangle_A_B_C => nrel_side: segment_AB; segment_AC; segment_BC;;
+struct_Triangle_A_B_C => nrel_perimeter: per;;
+
+struct_Circle_A_B => nrel_length: len;;
+struct_Circle_A_B => nrel_radius: segment_BC;;
+
+segment_AB => nrel_length: AB;;
+segment_AC => nrel_length: AC;;
+segment_BC => nrel_length: BC;;
+
+/*per <= nrel_value:
+		      ...
+		      (* -> rrel_m:
+ 				   ...
+				   (* <= nrel_identification:
+						             ...
+						             (* -> rrel_decimal: [12];; *);;
+				    *);;
+                      *);;*/
+
+len <= nrel_value:
+		      len1
+		      (* -> rrel_m:
+ 				   ...
+				   (* <= nrel_identification:
+						             ...
+						             (* -> rrel_decimal: [18,84];; *);;
+				    *);;
+                      *);;
+
+AB <= nrel_value:
+		      ...
+		      (* -> rrel_m:
+ 				   ...
+				   (* <= nrel_identification:
+						             ...
+						             (* -> rrel_decimal: [4];; *);;
+				    *);;
+                      *);;
+
+AC <= nrel_value:
+		      ...
+		      (* -> rrel_m:
+ 				   ...
+				   (* <= nrel_identification:
+						             ...
+						             (* -> rrel_decimal: [5];; *);;
+				    *);;
+                      *);;
+
+/*BC <= nrel_value:
+		      ...
+		      (* -> rrel_m:
+ 				   ...
+				   (* <= nrel_identification:
+						             ...
+						             (* -> rrel_decimal: [4];; *);;
+				    *);;
+                      *);;*/
+
+nrel_side
+<- sc_node_norole_relation;
+=> nrel_main_idtf: [сторона*] (*<-lang_ru;;*);;
+
+nrel_side
+<- sc_node_norole_relation;
+=> nrel_main_idtf: [сторона*] (*<-lang_ru;;*);;
+
+nrel_perimeter
+<- sc_node_norole_relation;
+=> nrel_main_idtf: [периметр*] (*<-lang_ru;;*);;
+
+nrel_square
+<- sc_node_norole_relation;
+=> nrel_main_idtf: [площадь*] (*<-lang_ru;;*);;
+
+
+concept_triangle <= nrel_main_statements: 
+                                         ...
+					 (* 
+                                            => nrel_main_idtf: [Формула периметра] (* <- lang_ru;; *);;
+                                            -> ut7	 
+                                                   (* 
+                                                   -> rrel_if: Pattern2;;
+                                                   -> rrel_then: Pattern5;; 
+                                                   *);;
+                                         *);;
+
+concept_circle <= nrel_main_statements: 
+                                         ...
+					 (* 
+                                            => nrel_main_idtf: [Формула длины окружности] (* <- lang_ru;; *);;
+                                            -> ut8	 
+                                                   (* 
+                                                   -> rrel_if: Pattern3;;
+                                                   -> rrel_then: Pattern4;; 
+                                                   *);;
+                                         *);;
+628 <= nrel_identification: ... (* -> rrel_decimal: [6,28];; *);;
+two <= nrel_identification: ... (* -> rrel_decimal: [2];; *);;
+five <= nrel_identification: ... (* -> rrel_decimal: [0,5];; *);;

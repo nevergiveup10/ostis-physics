@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GWF version="2.0">
+    <staticSector>
+        <node type="node/const/general_node" idtf="Reaction_of_normal_force" shapeColor="0" id="61320120" parent="0" left="0" top="0" right="158" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="-255" y="345" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/general_node" idtf="Reaction_of_normal_force" shapeColor="0" id="62766032" parent="0" left="0" top="0" right="158" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="-100.592" y="-196.005" haveBus="true">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/general_node" idtf="" shapeColor="0" id="62765312" parent="0" x="-19.7593" y="-97.4753" haveBus="false">
+            <content type="1" mime_type="content/term" file_name=""><![CDATA[Reaction of normal force]]></content>
+        </node>
+        <node type="node/const/general_node" idtf="" shapeColor="0" id="62770784" parent="0" x="-19.7593" y="-142.475" haveBus="false">
+            <content type="1" mime_type="content/term" file_name=""><![CDATA[Противодействие силы нормальной реакции]]></content>
+        </node>
+        <node type="node/const/general_node" idtf="" shapeColor="0" id="61319832" parent="0" x="15" y="375" haveBus="false">
+            <content type="1" mime_type="content/term" file_name=""><![CDATA[Сила нормальной реакции противодействует силе, оказываемой на опору со стороны тела.]]></content>
+        </node>
+        <node type="node/const/relation" idtf="nrel_main_idtf" shapeColor="0" id="62770640" parent="0" left="0" top="0" right="93" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="-60.6288" y="-222.149" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/group" idtf="lang_en" shapeColor="0" id="62770496" parent="0" left="0" top="0" right="53" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="85.2407" y="-97.4753" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/group" idtf="lang_ru" shapeColor="0" id="62770352" parent="0" left="0" top="0" right="52" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="85.2407" y="-142.475" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/general_node" idtf="" shapeColor="0" id="62763440" parent="0" x="-825" y="150" haveBus="false">
+            <content type="1" mime_type="content/term" file_name=""><![CDATA[normal force]]></content>
+        </node>
+        <node type="node/const/general_node" idtf="" shapeColor="0" id="62763584" parent="0" x="-825" y="105" haveBus="false">
+            <content type="1" mime_type="content/term" file_name=""><![CDATA[сила нормальной реакции]]></content>
+        </node>
+        <node type="node/const/general_node" idtf="Explanation_of_the_normal_force_formula" shapeColor="0" id="61317384" parent="0" left="0" top="0" right="253" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="-255" y="840" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/general_node" idtf="Formula_for_normal_force" shapeColor="0" id="61317528" parent="0" left="0" top="0" right="162" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="-420" y="840" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/general_node" idtf="Formula_for_normal_force" shapeColor="0" id="61317672" parent="0" left="0" top="0" right="162" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="-255" y="600" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/general_node" idtf="Explanation_of_the_normal_force_formula" shapeColor="0" id="62765744" parent="0" left="0" top="0" right="253" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="489.5" y="-193.167" haveBus="true">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/general_node" idtf="" shapeColor="0" id="62766320" parent="0" x="573.088" y="-86.0345" haveBus="false">
+            <content type="1" mime_type="content/term" file_name=""><![CDATA[Explanation of the normal force formula]]></content>
+        </node>
+        <node type="node/const/general_node" idtf="" shapeColor="0" id="62769776" parent="0" x="573.088" y="-131.034" haveBus="false">
+            <content type="1" mime_type="content/term" file_name=""><![CDATA[Пояснение формулы силы нормальной реакции]]></content>
+        </node>
+        <node type="node/const/relation" idtf="nrel_main_idtf" shapeColor="0" id="62767328" parent="0" left="0" top="0" right="93" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="535.701" y="-218.193" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/group" idtf="lang_en" shapeColor="0" id="62770064" parent="0" left="0" top="0" right="53" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="678.088" y="-86.0345" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/group" idtf="lang_ru" shapeColor="0" id="62769920" parent="0" left="0" top="0" right="52" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="678.088" y="-131.034" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/general_node" idtf="Formula_for_normal_force" shapeColor="0" id="62766896" parent="0" left="0" top="0" right="162" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="223.25" y="-194.25" haveBus="true">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/general_node" idtf="" shapeColor="0" id="62768624" parent="0" x="306.417" y="-86.3271" haveBus="false">
+            <content type="1" mime_type="content/term" file_name=""><![CDATA[Formula for normal force]]></content>
+        </node>
+        <node type="node/const/general_node" idtf="" shapeColor="0" id="62766176" parent="0" x="306.417" y="-131.327" haveBus="false">
+            <content type="1" mime_type="content/term" file_name=""><![CDATA[Формула силы нормальной реакции]]></content>
+        </node>
+        <node type="node/const/group" idtf="lang_en" shapeColor="0" id="62768768" parent="0" left="0" top="0" right="53" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="411.417" y="-86.3271" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/group" idtf="lang_ru" shapeColor="0" id="62768336" parent="0" left="0" top="0" right="52" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="411.417" y="-131.327" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/relation" idtf="nrel_main_idtf" shapeColor="0" id="62768480" parent="0" left="0" top="0" right="93" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="276.417" y="-221.327" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/general_node" idtf="Definition_of_normal_force" shapeColor="0" id="62766752" parent="0" left="0" top="0" right="164" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="-390.5" y="-191.735" haveBus="true">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/general_node" idtf="" shapeColor="0" id="62767904" parent="0" x="-313.833" y="-104.833" haveBus="false">
+            <content type="1" mime_type="content/term" file_name=""><![CDATA[Definition of normal force]]></content>
+        </node>
+        <node type="node/const/general_node" idtf="" shapeColor="0" id="62767184" parent="0" x="-313.833" y="-149.833" haveBus="false">
+            <content type="1" mime_type="content/term" file_name=""><![CDATA[Определение силы нормальной реакции]]></content>
+        </node>
+        <node type="node/const/group" idtf="lang_en" shapeColor="0" id="62768048" parent="0" left="0" top="0" right="53" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="-208.833" y="-104.833" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/group" idtf="lang_ru" shapeColor="0" id="62767616" parent="0" left="0" top="0" right="52" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="-208.833" y="-149.833" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/relation" idtf="nrel_main_idtf" shapeColor="0" id="62767760" parent="0" left="0" top="0" right="93" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="-343.833" y="-239.833" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/attribute" idtf="rrel_example" shapeColor="0" id="61319688" parent="0" left="0" top="0" right="82" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="-45" y="840" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/group" idtf="lang_ru" shapeColor="0" id="61318968" parent="0" left="0" top="0" right="52" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="150" y="870" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/group" idtf="lang_en" shapeColor="0" id="61319544" parent="0" left="0" top="0" right="53" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="150" y="810" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/group" idtf="sc_explanation" shapeColor="0" id="61319256" parent="0" left="0" top="0" right="93" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="-345" y="900" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/relation" idtf="nrel_sc_text_translation" shapeColor="0" id="61318248" parent="0" left="0" top="0" right="144" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="-120" y="750" haveBus="true">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/attribute" idtf="rrel_key_sc_element" shapeColor="0" id="61318392" parent="0" left="0" top="0" right="123" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="-360" y="750" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/group" idtf="formula" shapeColor="0" id="61314216" parent="0" left="0" top="0" right="52" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="150" y="600" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/attribute" idtf="rrel_example" shapeColor="0" id="61318104" parent="0" left="0" top="0" right="82" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="-45" y="555" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/relation" idtf="nrel_sc_text_translation" shapeColor="0" id="61318680" parent="0" left="0" top="0" right="144" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="-180" y="510" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/group" idtf="sc_statement" shapeColor="0" id="61318536" parent="0" left="0" top="0" right="80" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="-345" y="660" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/attribute" idtf="rrel_key_sc_element" shapeColor="0" id="61317960" parent="0" left="0" top="0" right="123" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="-360" y="510" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/group" idtf="normal_force" shapeColor="0" id="61317816" parent="0" left="0" top="0" right="83" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="-420" y="600" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/attribute" idtf="rrel_example" shapeColor="0" id="61321128" parent="0" left="0" top="0" right="82" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="-45" y="345" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/group" idtf="lang_ru" shapeColor="0" id="61320984" parent="0" left="0" top="0" right="52" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="150" y="375" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/group" idtf="lang_en" shapeColor="0" id="61315512" parent="0" left="0" top="0" right="53" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="150" y="315" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/relation" idtf="nrel_sc_text_translation" shapeColor="0" id="61320552" parent="0" left="0" top="0" right="144" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="-120" y="255" haveBus="true">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/group" idtf="sc_statement" shapeColor="0" id="61320264" parent="0" left="0" top="0" right="80" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="-345" y="405" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/attribute" idtf="rrel_key_sc_element" shapeColor="0" id="61320840" parent="0" left="0" top="0" right="123" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="-360" y="255" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/group" idtf="normal_force" shapeColor="0" id="61320696" parent="0" left="0" top="0" right="83" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="-420" y="345" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/group" idtf="lang_ru" shapeColor="0" id="62764016" parent="0" left="0" top="0" right="52" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="150" y="165" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/group" idtf="lang_en" shapeColor="0" id="62764880" parent="0" left="0" top="0" right="53" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="150" y="105" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/attribute" idtf="rrel_example" shapeColor="0" id="62764304" parent="0" left="0" top="0" right="82" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="-45" y="135" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/general_node" idtf="Definition_of_normal_force" shapeColor="0" id="61321704" parent="0" left="0" top="0" right="164" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="-255" y="135" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/relation" idtf="nrel_sc_text_translation" shapeColor="0" id="62764592" parent="0" left="0" top="0" right="144" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="-120" y="45" haveBus="true">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/group" idtf="sc_definition" shapeColor="0" id="62764160" parent="0" left="0" top="0" right="80" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="-345" y="195" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/group" idtf="normal_force" shapeColor="0" id="61321848" parent="0" left="0" top="0" right="83" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="-420" y="135" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/attribute" idtf="rrel_key_sc_element" shapeColor="0" id="61321416" parent="0" left="0" top="0" right="123" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="-360" y="45" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/group" idtf="lang_ru" shapeColor="0" id="62763152" parent="0" left="0" top="0" right="52" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="-720" y="195" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/group" idtf="lang_en" shapeColor="0" id="62763872" parent="0" left="0" top="0" right="53" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="-720" y="150" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/group" idtf="lang_ru" shapeColor="0" id="62763296" parent="0" left="0" top="0" right="52" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="-720" y="105" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/relation" idtf="nrel_idtf" shapeColor="0" id="61322136" parent="0" left="0" top="0" right="58" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="-900" y="240" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/relation" idtf="nrel_main_idtf" shapeColor="0" id="62763008" parent="0" left="0" top="0" right="93" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="-855" y="15" haveBus="true">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/group" idtf="normal_force" shapeColor="0" id="62763728" parent="0" left="0" top="0" right="83" bottom="25" textColor="164" text_angle="0" text_font="Times New Roman [Arial]" font_size="10" x="-975" y="75" haveBus="true">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/general_node" idtf="" shapeColor="0" id="61321992" parent="0" x="-825" y="195" haveBus="false">
+            <content type="1" mime_type="content/term" file_name=""><![CDATA[сила реакции опоры]]></content>
+        </node>
+        <node type="node/const/general_node" idtf="" shapeColor="0" id="62764736" parent="0" x="-105" y="165" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/general_node" idtf="" shapeColor="0" id="62764448" parent="0" x="-105" y="105" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/general_node" idtf="" shapeColor="0" id="61321560" parent="0" x="15" y="105" haveBus="false">
+            <content type="1" mime_type="content/term" file_name=""><![CDATA[Normal force is a force exerted by a support upon a body contacted with this suport.]]></content>
+        </node>
+        <node type="node/const/general_node" idtf="" shapeColor="0" id="61321272" parent="0" x="-105" y="315" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/general_node" idtf="" shapeColor="0" id="61320408" parent="0" x="-105" y="375" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/general_node" idtf="" shapeColor="0" id="61319976" parent="0" x="15" y="315" haveBus="false">
+            <content type="1" mime_type="content/term" file_name=""><![CDATA[Normal force counteracts a force exerted on a support by a body.]]></content>
+        </node>
+        <node type="node/const/general_node" idtf="" shapeColor="0" id="61319400" parent="0" x="-105" y="810" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/general_node" idtf="" shapeColor="0" id="61319112" parent="0" x="-105" y="870" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/general_node" idtf="" shapeColor="0" id="61318824" parent="0" x="-105" y="600" haveBus="false">
+            <content type="0" mime_type="" file_name=""/>
+        </node>
+        <node type="node/const/general_node" idtf="" shapeColor="0" id="61317240" parent="0" x="15" y="600" haveBus="false">
+            <content type="4" mime_type="image/png" file_name="Сила нормальной реакции.png"><![CDATA[iVBORw0KGgoAAAANSUhEUgAAAQ4AAABkCAIAAAD4y0l6AAAACXBIWXMAAAsTAAALEwEAmpwYAAABNmlDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjarY6xSsNQFEDPi6LiUCsEcXB4kygotupgxqQtRRCs1SHJ1qShSmkSXl7VfoSjWwcXd7/AyVFwUPwC/0Bx6uAQIYODCJ7p3MPlcsGo2HWnYZRhEGvVbjrS9Xw5+8QMUwDQCbPUbrUOAOIkjvjB5ysC4HnTrjsN/sZ8mCoNTIDtbpSFICpA/0KnGsQYMIN+qkHcAaY6addAPAClXu4vQCnI/Q0oKdfzQXwAZs/1fDDmADPIfQUwdXSpAWpJOlJnvVMtq5ZlSbubBJE8HmU6GmRyPw4TlSaqo6MukP8HwGK+2G46cq1qWXvr/DOu58vc3o8QgFh6LFpBOFTn3yqMnd/n4sZ4GQ5vYXpStN0ruNmAheuirVahvAX34y/Axk/96FpPYgAAOrBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+Cjx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIgogICAgICAgICAgICB4bWxuczpwaG90b3Nob3A9Imh0dHA6Ly9ucy5hZG9iZS5jb20vcGhvdG9zaG9wLzEuMC8iCiAgICAgICAgICAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIKICAgICAgICAgICAgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iCiAgICAgICAgICAgIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiCiAgICAgICAgICAgIHhtbG5zOnRpZmY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vdGlmZi8xLjAvIgogICAgICAgICAgICB4bWxuczpleGlmPSJodHRwOi8vbnMuYWRvYmUuY29tL2V4aWYvMS4wLyI+CiAgICAgICAgIDx4bXA6Q3JlYXRvclRvb2w+QWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpPC94bXA6Q3JlYXRvclRvb2w+CiAgICAgICAgIDx4bXA6Q3JlYXRlRGF0ZT4yMDE0LTEwLTE1VDIxOjIzOjA3KzAzOjAwPC94bXA6Q3JlYXRlRGF0ZT4KICAgICAgICAgPHhtcDpNZXRhZGF0YURhdGU+MjAxNC0xMC0xNVQyMToyMzowNyswMzowMDwveG1wOk1ldGFkYXRhRGF0ZT4KICAgICAgICAgPHhtcDpNb2RpZnlEYXRlPjIwMTQtMTAtMTVUMjE6MjM6MDcrMDM6MDA8L3htcDpNb2RpZnlEYXRlPgogICAgICAgICA8cGhvdG9zaG9wOkRvY3VtZW50QW5jZXN0b3JzPgogICAgICAgICAgICA8cmRmOkJhZz4KICAgICAgICAgICAgICAgPHJkZjpsaT5hZG9iZTpkb2NpZDpwaG90b3Nob3A6MTcwNDY2YWItNTQ4ZS0xMWU0LTkwOTItYzVhMTMyMWIxM2M0PC9yZGY6bGk+CiAgICAgICAgICAgICAgIDxyZGY6bGk+YWRvYmU6ZG9jaWQ6cGhvdG9zaG9wOjI1NmZlNzY2LTQyOGItMTFlNC1iNDIwLWNjY2U5YWMxNDJjZTwvcmRmOmxpPgogICAgICAgICAgICAgICA8cmRmOmxpPmFkb2JlOmRvY2lkOnBob3Rvc2hvcDozODcxNDk4My01M2RlLTExZTQtOThhNC1jNzdiNWRkM2FkYzk8L3JkZjpsaT4KICAgICAgICAgICAgICAgPHJkZjpsaT5hZG9iZTpkb2NpZDpwaG90b3Nob3A6Y2VkNjk1NzgtNDI4ZC0xMWU0LWI0MjAtY2NjZTlhYzE0MmNlPC9yZGY6bGk+CiAgICAgICAgICAgICAgIDxyZGY6bGk+YWRvYmU6ZG9jaWQ6cGhvdG9zaG9wOmY0OWQ3ZDU4LTQyZjUtMTFlNC1iZDU5LTliNWI5MDgyMTkyODwvcmRmOmxpPgogICAgICAgICAgICA8L3JkZjpCYWc+CiAgICAgICAgIDwvcGhvdG9zaG9wOkRvY3VtZW50QW5jZXN0b3JzPgogICAgICAgICA8cGhvdG9zaG9wOkNvbG9yTW9kZT4zPC9waG90b3Nob3A6Q29sb3JNb2RlPgogICAgICAgICA8cGhvdG9zaG9wOklDQ1Byb2ZpbGU+QWRvYmUgUkdCICgxOTk4KTwvcGhvdG9zaG9wOklDQ1Byb2ZpbGU+CiAgICAgICAgIDxkYzpmb3JtYXQ+aW1hZ2UvcG5nPC9kYzpmb3JtYXQ+CiAgICAgICAgIDx4bXBNTTpJbnN0YW5jZUlEPnhtcC5paWQ6MGYyYTIyZDctZTIxOC04ZjRhLTg0ZDItNjk2OWIxZWMwYWY1PC94bXBNTTpJbnN0YW5jZUlEPgogICAgICAgICA8eG1wTU06RG9jdW1lbnRJRD54bXAuZGlkOjBmMmEyMmQ3LWUyMTgtOGY0YS04NGQyLTY5NjliMWVjMGFmNTwveG1wTU06RG9jdW1lbnRJRD4KICAgICAgICAgPHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD54bXAuZGlkOjBmMmEyMmQ3LWUyMTgtOGY0YS04NGQyLTY5NjliMWVjMGFmNTwveG1wTU06T3JpZ2luYWxEb2N1bWVudElEPgogICAgICAgICA8eG1wTU06SGlzdG9yeT4KICAgICAgICAgICAgPHJkZjpTZXE+CiAgICAgICAgICAgICAgIDxyZGY6bGkgcmRmOnBhcnNlVHlwZT0iUmVzb3VyY2UiPgogICAgICAgICAgICAgICAgICA8c3RFdnQ6YWN0aW9uPmNyZWF0ZWQ8L3N0RXZ0OmFjdGlvbj4KICAgICAgICAgICAgICAgICAgPHN0RXZ0Omluc3RhbmNlSUQ+eG1wLmlpZDowZjJhMjJkNy1lMjE4LThmNGEtODRkMi02OTY5YjFlYzBhZjU8L3N0RXZ0Omluc3RhbmNlSUQ+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDp3aGVuPjIwMTQtMTAtMTVUMjE6MjM6MDcrMDM6MDA8L3N0RXZ0OndoZW4+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDpzb2Z0d2FyZUFnZW50PkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE0IChXaW5kb3dzKTwvc3RFdnQ6c29mdHdhcmVBZ2VudD4KICAgICAgICAgICAgICAgPC9yZGY6bGk+CiAgICAgICAgICAgIDwvcmRmOlNlcT4KICAgICAgICAgPC94bXBNTTpIaXN0b3J5PgogICAgICAgICA8dGlmZjpPcmllbnRhdGlvbj4xPC90aWZmOk9yaWVudGF0aW9uPgogICAgICAgICA8dGlmZjpYUmVzb2x1dGlvbj43MjAwMDAvMTAwMDA8L3RpZmY6WFJlc29sdXRpb24+CiAgICAgICAgIDx0aWZmOllSZXNvbHV0aW9uPjcyMDAwMC8xMDAwMDwvdGlmZjpZUmVzb2x1dGlvbj4KICAgICAgICAgPHRpZmY6UmVzb2x1dGlvblVuaXQ+MjwvdGlmZjpSZXNvbHV0aW9uVW5pdD4KICAgICAgICAgPGV4aWY6Q29sb3JTcGFjZT42NTUzNTwvZXhpZjpDb2xvclNwYWNlPgogICAgICAgICA8ZXhpZjpQaXhlbFhEaW1lbnNpb24+MjcwPC9leGlmOlBpeGVsWERpbWVuc2lvbj4KICAgICAgICAgPGV4aWY6UGl4ZWxZRGltZW5zaW9uPjEwMDwvZXhpZjpQaXhlbFlEaW1lbnNpb24+CiAgICAgIDwvcmRmOkRlc2NyaXB0aW9uPgogICA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgIAo8P3hwYWNrZXQgZW5kPSJ3Ij8+j02ZfAAAACBjSFJNAAB6JQAAgIMAAPn/AACA6AAAUggAARVYAAA6lwAAF2/XWh+QAAANzElEQVR42uydfWgbZRzHr27CiEUkVjdkZC7KCLrNzHaISs9upc6QOCEla8IQLE2ROUda2hJmGKWMTMMcaxgSoSmFTWm22My5lmwTO73JYG4Z6ebL4cY5w/6YMxxFawQt4h8HD88ul8sl1zZZ+/389TS9y7093+f5vT2XmldffZUBABTjAdwCACAVACAVACAVACAVACAVACAVAACkAgCkAgCkAgCkAgCkAgCkAgCkAgCAVACAVACAVACAVACAVACAVACAVAAAkAoAkAoAkAoAkAoAkAoAkIpuduzYsWrVKjwPAKkU4c8//4xEIq2trcuXL8dTAVXIsqeeeqoazuPWrVtNTU3Nzc0tLS3Lli3LZDL//PMPHg+oHmrm5E34mzZt0v8la9as2bVrl9T+999/v/vuu6+//prjODwkUA3MjbXzwQcfzO1pPfjggy+//PLKlSshFbCopPLuu+/q/xKz2dzd3V1TU8MwzOzs7JUrVz777DM8IbCopHLjxg29PtOyZT09PTU1NdPT059//nkymZyensbjAVowGo1Op3PDhg0Wi4V8mEqlBEGIRqPV5avop7m52efznThxYmxs7O+//8bjL4kdO3ZwHHfnzp0leO1er9flcqlsMDIyEovF9B+oWiJgmzdv/vjjj7/99tvZ2Vl0/VIxmUz9/f2zs7M3btz477//ls6Fh8PhV155RX2bTZs2rVix4urVq9U1q8gkHo/HNc6A4XBYmj0zmUxnZyd6f2lm9PLlH3300ZNPPnn37t1Tp06dOXNmZmZm0V91V1eXzWZT7Gwsy7a2ttL2mP65ZY6lcvbsWdknGtXy6aef1tXVSe1t27YtqY6OUHsZsCwbCASkdi6XGxgYSKfTKlrK5XIdHR2iKFbYrVfBbrcnEgk9p7joQai9DFpbW0l7eHg4XycMwwwODq5du1aaWwwGg9Pp1OPlz7tUDAbDrl27gsEgJFEIhNrLmFKIccXz/Pj4eKEt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]]></content>
+        </node>
+        <node type="node/const/general_node" idtf="" shapeColor="0" id="61317096" parent="0" x="15" y="165" haveBus="false">
+            <content type="1" mime_type="content/term" file_name=""><![CDATA[Сила нормальной реакции - это сила, действующая на тело со стороны опоры, с которой это тело контактирует.]]></content>
+        </node>
+        <node type="node/const/general_node" idtf="" shapeColor="0" id="61316952" parent="0" x="15" y="870" haveBus="false">
+            <content type="1" mime_type="content/term" file_name=""><![CDATA[Где N - это сила нормальной реакции;
+m - масса тела;
+g - ускорение свободного падения;
+? - угол между телом и опорой;]]></content>
+        </node>
+        <node type="node/const/general_node" idtf="" shapeColor="0" id="61316808" parent="0" x="15" y="810" haveBus="false">
+            <content type="1" mime_type="content/term" file_name=""><![CDATA[Where N is a normal force;
+m is a mass of a body;
+g is a gravitational acceleration;
+? is an angle between a body and a surface plane;]]></content>
+        </node>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="60964360" parent="0" id_b="62770640" id_e="60963688" b_x="-60.6288" b_y="-222.149" e_x="0" e_y="0" dotBBalance="0" dotEBalance="0.696488">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="60964528" parent="0" id_b="62770640" id_e="60963856" b_x="-60.6288" b_y="-222.149" e_x="0" e_y="0" dotBBalance="0" dotEBalance="0.189305">
+            <points/>
+        </arc>
+        <pair type="pair/const/orient" idtf="" shapeColor="0" id="60963688" parent="0" id_b="19410304" id_e="62765312" b_x="0" b_y="0" e_x="-19.7593" e_y="-97.4753" dotBBalance="0.663248" dotEBalance="0">
+            <points/>
+        </pair>
+        <pair type="pair/const/orient" idtf="" shapeColor="0" id="60963856" parent="0" id_b="19410304" id_e="62770784" b_x="0" b_y="0" e_x="-19.7593" e_y="-142.475" dotBBalance="0.311785" dotEBalance="0">
+            <points/>
+        </pair>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="60964024" parent="0" id_b="62770352" id_e="62770784" b_x="85.2407" b_y="-142.475" e_x="-19.7593" e_y="-142.475" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="60964192" parent="0" id_b="62770496" id_e="62765312" b_x="85.2407" b_y="-97.4753" e_x="-19.7593" e_y="-97.4753" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="60963520" parent="0" id_b="62767328" id_e="60959320" b_x="535.701" b_y="-218.193" e_x="0" e_y="0" dotBBalance="0" dotEBalance="0.62899">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="60963352" parent="0" id_b="62767328" id_e="60961168" b_x="535.701" b_y="-218.193" e_x="0" e_y="0" dotBBalance="0" dotEBalance="0.258405">
+            <points/>
+        </arc>
+        <pair type="pair/const/orient" idtf="" shapeColor="0" id="60959320" parent="0" id_b="60833880" id_e="62766320" b_x="0" b_y="0" e_x="573.088" e_y="-86.0345" dotBBalance="0.737679" dotEBalance="0">
+            <points/>
+        </pair>
+        <pair type="pair/const/orient" idtf="" shapeColor="0" id="60961168" parent="0" id_b="60833880" id_e="62769776" b_x="0" b_y="0" e_x="573.088" e_y="-131.034" dotBBalance="0.369856" dotEBalance="0">
+            <points/>
+        </pair>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="63092008" parent="0" id_b="62770064" id_e="62766320" b_x="678.088" b_y="-86.0345" e_x="573.088" e_y="-86.0345" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="60958984" parent="0" id_b="62769920" id_e="62769776" b_x="678.088" b_y="-131.034" e_x="573.088" e_y="-131.034" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="60962344" parent="0" id_b="62768480" id_e="60961840" b_x="276.417" b_y="-221.327" e_x="0" e_y="0" dotBBalance="0" dotEBalance="0.636028">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="60962176" parent="0" id_b="62768480" id_e="60962008" b_x="276.417" b_y="-221.327" e_x="0" e_y="0" dotBBalance="0" dotEBalance="0.295531">
+            <points/>
+        </arc>
+        <pair type="pair/const/orient" idtf="" shapeColor="0" id="60961840" parent="0" id_b="19410688" id_e="62768624" b_x="0" b_y="0" e_x="306.417" e_y="-86.3271" dotBBalance="0.765848" dotEBalance="0">
+            <points/>
+        </pair>
+        <pair type="pair/const/orient" idtf="" shapeColor="0" id="60962008" parent="0" id_b="19410688" id_e="62766176" b_x="0" b_y="0" e_x="306.417" e_y="-131.327" dotBBalance="0.368059" dotEBalance="0">
+            <points/>
+        </pair>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="60961504" parent="0" id_b="62768336" id_e="62766176" b_x="411.417" b_y="-131.327" e_x="306.417" e_y="-131.327" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="60961672" parent="0" id_b="62768768" id_e="62768624" b_x="411.417" b_y="-86.3271" e_x="306.417" e_y="-86.3271" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </arc>
+        <pair type="pair/const/orient" idtf="" shapeColor="0" id="63091336" parent="0" id_b="19409920" id_e="62767904" b_x="0" b_y="0" e_x="-313.833" e_y="-104.833" dotBBalance="0.639803" dotEBalance="0">
+            <points/>
+        </pair>
+        <pair type="pair/const/orient" idtf="" shapeColor="0" id="63091504" parent="0" id_b="19409920" id_e="62767184" b_x="0" b_y="0" e_x="-313.833" e_y="-149.833" dotBBalance="0.250214" dotEBalance="0">
+            <points/>
+        </pair>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="63091840" parent="0" id_b="62767760" id_e="63091336" b_x="-343.833" b_y="-239.833" e_x="0" e_y="0" dotBBalance="0" dotEBalance="0.687102">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="63091672" parent="0" id_b="62767760" id_e="63091504" b_x="-343.833" b_y="-239.833" e_x="0" e_y="0" dotBBalance="0" dotEBalance="0.195627">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="63091168" parent="0" id_b="62767616" id_e="62767184" b_x="-208.833" b_y="-149.833" e_x="-313.833" e_y="-149.833" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="63091000" parent="0" id_b="62768048" id_e="62767904" b_x="-208.833" b_y="-104.833" e_x="-313.833" e_y="-104.833" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </arc>
+        <pair type="pair/const/orient" idtf="" shapeColor="0" id="63087472" parent="0" id_b="19409152" id_e="62763584" b_x="0" b_y="0" e_x="-825" e_y="105" dotBBalance="0.114391" dotEBalance="0">
+            <points/>
+        </pair>
+        <pair type="pair/const/orient" idtf="" shapeColor="0" id="63087304" parent="0" id_b="62764736" id_e="61321704" b_x="-105" b_y="165" e_x="-255" e_y="135" dotBBalance="0" dotEBalance="0">
+            <points>
+                <point x="-255" y="165"/>
+            </points>
+        </pair>
+        <pair type="pair/const/orient" idtf="" shapeColor="0" id="63087136" parent="0" id_b="62764448" id_e="61321704" b_x="-105" b_y="105" e_x="-255" e_y="135" dotBBalance="0" dotEBalance="0">
+            <points>
+                <point x="-255" y="105"/>
+            </points>
+        </pair>
+        <pair type="pair/const/orient" idtf="" shapeColor="0" id="63086968" parent="0" id_b="61319112" id_e="61317384" b_x="-105" b_y="870" e_x="-255" e_y="840" dotBBalance="0" dotEBalance="0">
+            <points>
+                <point x="-255" y="870"/>
+            </points>
+        </pair>
+        <pair type="pair/const/orient" idtf="" shapeColor="0" id="63086800" parent="0" id_b="61319400" id_e="61317384" b_x="-105" b_y="810" e_x="-255" e_y="840" dotBBalance="0" dotEBalance="0">
+            <points>
+                <point x="-255" y="810"/>
+            </points>
+        </pair>
+        <pair type="pair/const/orient" idtf="" shapeColor="0" id="63086632" parent="0" id_b="61318824" id_e="61317672" b_x="-105" b_y="600" e_x="-255" e_y="600" dotBBalance="0" dotEBalance="0">
+            <points>
+                <point x="-210" y="600"/>
+            </points>
+        </pair>
+        <pair type="pair/const/orient" idtf="" shapeColor="0" id="63086464" parent="0" id_b="19409152" id_e="62763440" b_x="0" b_y="0" e_x="-825" e_y="150" dotBBalance="0.446494" dotEBalance="0">
+            <points/>
+        </pair>
+        <pair type="pair/const/orient" idtf="" shapeColor="0" id="63086296" parent="0" id_b="19409152" id_e="61321992" b_x="0" b_y="0" e_x="-825" e_y="195" dotBBalance="0.778598" dotEBalance="0">
+            <points/>
+        </pair>
+        <pair type="pair/const/orient" idtf="" shapeColor="0" id="63086128" parent="0" id_b="61320408" id_e="61320120" b_x="-105" b_y="375" e_x="-255" e_y="345" dotBBalance="0" dotEBalance="0">
+            <points>
+                <point x="-255" y="375"/>
+            </points>
+        </pair>
+        <pair type="pair/const/orient" idtf="" shapeColor="0" id="63085960" parent="0" id_b="61321272" id_e="61320120" b_x="-105" b_y="315" e_x="-255" e_y="345" dotBBalance="0" dotEBalance="0">
+            <points>
+                <point x="-255" y="315"/>
+            </points>
+        </pair>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="63085792" parent="0" id_b="19409280" id_e="63087472" b_x="0" b_y="0" e_x="0" e_y="0" dotBBalance="0.010989" dotEBalance="0.774908">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="63085624" parent="0" id_b="62764448" id_e="61321560" b_x="-105" b_y="105" e_x="15" e_y="105" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="63085456" parent="0" id_b="62764880" id_e="61321560" b_x="150" b_y="105" e_x="15" e_y="105" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="63085288" parent="0" id_b="61321704" id_e="61321848" b_x="-255" b_y="135" e_x="-420" e_y="135" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="63085120" parent="0" id_b="62764736" id_e="61317096" b_x="-105" b_y="165" e_x="15" e_y="165" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="63084952" parent="0" id_b="62764016" id_e="61317096" b_x="150" b_y="165" e_x="15" e_y="165" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="63084784" parent="0" id_b="61321416" id_e="63085288" b_x="-360" b_y="45" e_x="0" e_y="0" dotBBalance="0" dotEBalance="0.665441">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="63084616" parent="0" id_b="19409408" id_e="63087136" b_x="0" b_y="0" e_x="0" e_y="0" dotBBalance="0.205298" dotEBalance="0.225092">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="63084448" parent="0" id_b="19409408" id_e="63087304" b_x="0" b_y="0" e_x="0" e_y="0" dotBBalance="0.602649" dotEBalance="0.446494">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="63084280" parent="0" id_b="62764304" id_e="63085120" b_x="-45" b_y="135" e_x="0" e_y="0" dotBBalance="0" dotEBalance="0.5">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="63084112" parent="0" id_b="62764304" id_e="63085624" b_x="-45" b_y="135" e_x="0" e_y="0" dotBBalance="0" dotEBalance="0.5">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="61982120" parent="0" id_b="62764160" id_e="61321704" b_x="-345" b_y="195" e_x="-255" e_y="135" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="61981952" parent="0" id_b="62763296" id_e="62763584" b_x="-720" b_y="105" e_x="-825" e_y="105" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="61981784" parent="0" id_b="62763872" id_e="62763440" b_x="-720" b_y="150" e_x="-825" e_y="150" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="61981616" parent="0" id_b="19409280" id_e="63086464" b_x="0" b_y="0" e_x="0" e_y="0" dotBBalance="0.67033" dotEBalance="0.553506">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="61981448" parent="0" id_b="61319688" id_e="61979936" b_x="-45" b_y="840" e_x="0" e_y="0" dotBBalance="0" dotEBalance="0.5">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="61981280" parent="0" id_b="19409024" id_e="63086968" b_x="0" b_y="0" e_x="0" e_y="0" dotBBalance="0.602649" dotEBalance="0.446494">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="61981112" parent="0" id_b="61318392" id_e="61979600" b_x="-360" b_y="750" e_x="0" e_y="0" dotBBalance="0" dotEBalance="0.665441">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="61980944" parent="0" id_b="61318536" id_e="61317672" b_x="-345" b_y="660" e_x="-255" e_y="600" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="61980776" parent="0" id_b="19409024" id_e="63086800" b_x="0" b_y="0" e_x="0" e_y="0" dotBBalance="0.205298" dotEBalance="0.225092">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="61980608" parent="0" id_b="61317672" id_e="61317816" b_x="-255" b_y="600" e_x="-420" e_y="600" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="61980440" parent="0" id_b="61319688" id_e="61978928" b_x="-45" b_y="840" e_x="0" e_y="0" dotBBalance="0" dotEBalance="0.5">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="61980272" parent="0" id_b="61318104" id_e="61979264" b_x="-45" b_y="555" e_x="0" e_y="0" dotBBalance="0" dotEBalance="0.5">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="61980104" parent="0" id_b="61318968" id_e="61316952" b_x="150" b_y="870" e_x="15" e_y="870" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="61979936" parent="0" id_b="61319112" id_e="61316952" b_x="-105" b_y="870" e_x="15" e_y="870" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="61979768" parent="0" id_b="61319256" id_e="61317384" b_x="-345" b_y="900" e_x="-255" e_y="840" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="61979600" parent="0" id_b="61317384" id_e="61317528" b_x="-255" b_y="840" e_x="-420" e_y="840" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="61979432" parent="0" id_b="61318680" id_e="63086632" b_x="-180" b_y="510" e_x="0" e_y="0" dotBBalance="0" dotEBalance="0.668508">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="61979264" parent="0" id_b="61318824" id_e="61317240" b_x="-105" b_y="600" e_x="15" e_y="600" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="61979096" parent="0" id_b="61319544" id_e="61316808" b_x="150" b_y="810" e_x="15" e_y="810" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="61978928" parent="0" id_b="61319400" id_e="61316808" b_x="-105" b_y="810" e_x="15" e_y="810" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="61978760" parent="0" id_b="61317960" id_e="61980608" b_x="-360" b_y="510" e_x="0" e_y="0" dotBBalance="0" dotEBalance="0.665441">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="61978592" parent="0" id_b="62763152" id_e="61321992" b_x="-720" b_y="195" e_x="-825" e_y="195" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="61978424" parent="0" id_b="61322136" id_e="63086296" b_x="-900" b_y="240" e_x="0" e_y="0" dotBBalance="0" dotEBalance="0.553506">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="61978256" parent="0" id_b="61315512" id_e="61319976" b_x="150" b_y="315" e_x="15" e_y="315" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="61978088" parent="0" id_b="19408896" id_e="63085960" b_x="0" b_y="0" e_x="0" e_y="0" dotBBalance="0.205298" dotEBalance="0.225092">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="61977920" parent="0" id_b="61321272" id_e="61319976" b_x="-105" b_y="315" e_x="15" e_y="315" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="61977752" parent="0" id_b="61321128" id_e="61977584" b_x="-45" b_y="345" e_x="0" e_y="0" dotBBalance="0" dotEBalance="0.5">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="61977584" parent="0" id_b="61320408" id_e="61319832" b_x="-105" b_y="375" e_x="15" e_y="375" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="61977416" parent="0" id_b="61320264" id_e="61320120" b_x="-345" b_y="405" e_x="-255" e_y="345" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="61977248" parent="0" id_b="61320984" id_e="61319832" b_x="150" b_y="375" e_x="15" e_y="375" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="61977080" parent="0" id_b="19408896" id_e="63086128" b_x="0" b_y="0" e_x="0" e_y="0" dotBBalance="0.602649" dotEBalance="0.446494">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="61976912" parent="0" id_b="61321128" id_e="61977920" b_x="-45" b_y="345" e_x="0" e_y="0" dotBBalance="0" dotEBalance="0.5">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="61976744" parent="0" id_b="61320120" id_e="61320696" b_x="-255" b_y="345" e_x="-420" e_y="345" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="61976576" parent="0" id_b="61320840" id_e="61976744" b_x="-360" b_y="255" e_x="0" e_y="0" dotBBalance="0" dotEBalance="0.665441">
+            <points/>
+        </arc>
+        <arc type="arc/const/pos" idtf="" shapeColor="0" id="61976408" parent="0" id_b="61314216" id_e="61317240" b_x="150" b_y="600" e_x="15" e_y="600" dotBBalance="0" dotEBalance="0">
+            <points/>
+        </arc>
+        <bus type="" idtf="" shapeColor="0" id="60833880" parent="0" owner="62765744" b_x="489.5" b_y="-178.667" e_x="489.5" e_y="-52">
+            <points/>
+        </bus>
+        <bus type="" idtf="" shapeColor="0" id="19410688" parent="0" owner="62766896" b_x="223.25" b_y="-179.75" e_x="223.25" e_y="-55">
+            <points/>
+        </bus>
+        <bus type="" idtf="" shapeColor="0" id="19410304" parent="0" owner="62766032" b_x="-100.592" b_y="-181.505" e_x="-100.592" e_y="-57.7982">
+            <points/>
+        </bus>
+        <bus type="" idtf="" shapeColor="0" id="19409920" parent="0" owner="62766752" b_x="-390.5" b_y="-177.235" e_x="-390.5" e_y="-61.7284">
+            <points/>
+        </bus>
+        <bus type="" idtf="" shapeColor="0" id="19409408" parent="0" owner="62764592" b_x="-134.5" b_y="45" e_x="-210" e_y="45">
+            <points/>
+        </bus>
+        <bus type="" idtf="" shapeColor="0" id="19409280" parent="0" owner="62763008" b_x="-869.5" b_y="15" e_x="-915" e_y="15">
+            <points/>
+        </bus>
+        <bus type="" idtf="" shapeColor="0" id="19409152" parent="0" owner="62763728" b_x="-975" b_y="89.5" e_x="-975" e_y="225">
+            <points/>
+        </bus>
+        <bus type="" idtf="" shapeColor="0" id="19409024" parent="0" owner="61318248" b_x="-134.5" b_y="750" e_x="-210" e_y="750">
+            <points/>
+        </bus>
+        <bus type="" idtf="" shapeColor="0" id="19408896" parent="0" owner="61320552" b_x="-134.5" b_y="255" e_x="-210" e_y="255">
+            <points/>
+        </bus>
+    </staticSector>
+</GWF>

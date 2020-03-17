@@ -1,0 +1,377 @@
+/*
+ТОЛЬКО ДЛЯ СУММЫ И РАЗНОСТИ!
+Процедура, которая проверяет тестовый пример на 
+- наличие узла суммы; 
+- наличие слагаемых;
+- наличие неизвестных переменных (должна быть только одна);
+- если есть члены уравнения с единицами измерения, а также без них, то ошибка (фэйловый тестовый пример) 
+*/
+
+scp_program -> proc_check (*	
+-> rrel_params: .proc_check_params 
+(*
+	-> rrel_1: rrel_in: _param;;
+	-> rrel_2: rrel_in: _answer;;
+*);;
+
+-> rrel_operators: .proc_check_operator_set 
+(*
+
+	//1.a) Генерируем узел, в который будем заносить узлы, не имеющие значений.
+	-> rrel_init: .proc_check_operator1A 
+		(*
+			 <- genEl;;
+			 -> rrel_1: rrel_assign: rrel_const: rrel_node: rrel_scp_var: _valueless;;
+
+			 => nrel_goto: .proc_check_operator1B;;
+		*);;
+
+	-> .proc_check_operator1B 
+		(*
+			 <- genEl;;
+			 -> rrel_1: rrel_assign: rrel_const: rrel_node: rrel_scp_var: _nrel_container;;
+
+			 => nrel_goto: .proc_check_operator2;;
+		*);;
+
+	//2. В параметре, заданном пользователем, находим узел суммы (слагаемое1 + слагаемое2 = сумма)
+	-> .proc_check_operator2 
+		(*
+			  <- searchElStr3;;
+			  -> rrel_1: rrel_fixed: rrel_scp_var: _param;;
+			  -> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _binary_arc;;
+			  -> rrel_3: rrel_assign: rrel_scp_var: _sum_node;;
+		        
+		          => nrel_then: .proc_check_operator3A;;
+			  => nrel_else: .proc_check_operator13;;
+		*);;  
+
+	//3.a) Проверяем, является ли найденное число значением какого-либо узла
+	-> .proc_check_operator3A
+		(*
+			  <- searchElStr5;;
+			  -> rrel_1: rrel_assign: rrel_scp_var: _some_node;;
+			  -> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _binary_arc;;
+			  -> rrel_3: rrel_fixed: rrel_scp_var: _sum_node;;
+		          -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+		          -> rrel_5: rrel_fixed: rrel_scp_const: nrel_value;;
+
+			  => nrel_then: .proc_check_operator3A_A;;
+			  => nrel_else: .proc_check_operator3B;;
+		*);; 
+
+	//3.a.a) Заносим nrel-узел в _nrel_container
+	-> .proc_check_operator3A_A 
+		(*
+			  <- genElStr3;;
+			  -> rrel_1: rrel_fixed: rrel_scp_var: _nrel_container;;
+			  -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			  -> rrel_3: rrel_fixed: rrel_scp_const: nrel_value;;
+
+			  => nrel_goto: .proc_check_operator4;;
+		*);; 
+
+	//3.b) Проверяем, является ли найденное число идентификацией какого-либо узла 
+	-> .proc_check_operator3B 
+		(*
+			  <- searchElStr5;;
+			  -> rrel_1: rrel_assign: rrel_scp_var: _some_node;;
+			  -> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _binary_arc;;
+			  -> rrel_3: rrel_fixed: rrel_scp_var: _sum_node;;
+			  -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			  -> rrel_5: rrel_fixed: rrel_scp_const: nrel_identification;;
+
+			  => nrel_then: .proc_check_operator3B_A;;
+			  => nrel_else: .proc_check_operator3C;;
+		*);;
+
+	//3.b.a) Заносим nrel-узел в _nrel_container
+	-> .proc_check_operator3B_A 
+		(*
+			  <- genElStr3;;
+			  -> rrel_1: rrel_fixed: rrel_scp_var: _nrel_container;;
+			  -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			  -> rrel_3: rrel_fixed: rrel_scp_const: nrel_identification;;
+
+			  => nrel_goto: .proc_check_operator4;;
+		*);; 
+
+	//3.c) Заносим найденное число в "незначащий" узел
+	-> .proc_check_operator3C 
+		(*
+			  <- genElStr3;;
+			  -> rrel_1: rrel_fixed: rrel_scp_var: _valueless;;
+			  -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			  -> rrel_3: rrel_fixed: rrel_scp_var: _sum_node;;
+
+			  => nrel_goto: .proc_check_operator4;;
+		*);; 
+
+	//4. Проверка на наличие слагаемых, и заносим их во множество "Обзор найденных узлов"
+	-> .proc_check_operator4
+		(*
+			  <- searchSetStr3;;
+			  -> rrel_1: rrel_fixed: rrel_scp_var: _param;;
+			  -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			  -> rrel_3: rrel_assign: rrel_scp_var: _found_nodes;;
+		        
+			  -> rrel_set_3: rrel_assign: rrel_scp_var: _review_of_found_nodes;;
+
+		          => nrel_then: .proc_check_operator5A;;
+			  => nrel_else: .proc_check_operator14;;//Сообщение об ошибке
+		*);;
+
+	//<НАЧАЛО ЦИКЛА> (Смысл цикла в том, чтобы из найденных узлов выбрать те, которые не являются ничьими значениями)
+	//5.a) Начинаем по одному обрабатывать найденные узлы
+	-> .proc_check_operator5A
+		(*
+			  <- searchElStr3;;
+
+			  -> rrel_1: rrel_fixed: rrel_scp_var: _review_of_found_nodes;;
+			  -> rrel_2: rrel_assign:  rrel_pos_const_perm: rrel_scp_var: _arc;; 
+			  -> rrel_3: rrel_assign: rrel_scp_var: _found_node;;
+
+			  => nrel_then: .proc_check_operator5B;;
+			  => nrel_else: .proc_check_operator6;;
+
+		*);;
+
+	//5.b) Удаляем ребро, связывающее множество "Обзор найденных узлов" и найденный узел
+	-> .proc_check_operator5B 
+		(*
+			 <- eraseEl;;
+			 -> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _arc;;
+
+			 => nrel_goto: .proc_check_operator5C;;
+		*);;
+
+	//5.c) Проверяем, является ли найденный узел числовым значением какого-либо узла
+	-> .proc_check_operator5C 
+		(*
+			  <- searchElStr5;;
+			  -> rrel_1: rrel_assign: rrel_scp_var: _some_node;;
+			  -> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _binary_arc;;
+			  -> rrel_3: rrel_fixed: rrel_scp_var: _found_node;;
+		          -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+		          -> rrel_5: rrel_fixed: rrel_scp_const: nrel_value;;
+
+			  => nrel_then: .proc_check_operator5D;;
+			  => nrel_else: .proc_check_operator5F;;//Проверка на наличие связи с nrel_identification
+		*);;
+
+	//5.d) Проверка наличия nrel'а в _nrel_container. 
+	-> .proc_check_operator5D 
+		(*
+			  <- searchElStr3;;
+			  -> rrel_1: rrel_fixed: rrel_scp_var: _nrel_container;;
+			  -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			  -> rrel_3: rrel_assign: rrel_scp_var: _nrel_node;;
+
+		          => nrel_then: .proc_check_operator5E;;//Если уже там что-то существует
+			  => nrel_else: .proc_check_operator5D_A;;//Если _nrel_container пуст
+		*);;
+
+	//5.d.a) Заносим nrel_value в _nrel_container
+	-> .proc_check_operator5D_A 
+		(*
+			  <- genElStr3;;
+			  -> rrel_1: rrel_fixed: rrel_scp_var: _nrel_container;;
+			  -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			  -> rrel_3: rrel_fixed: rrel_scp_const: nrel_value;;
+
+			  => nrel_goto: .proc_check_operator5A;;//В начало цикла
+		*);; 
+
+	//5.e) Если nrel'ы у каких либо членов уравнения разные, то тест фэйловый
+	-> .proc_check_operator5E 
+		(*
+			  <- ifCoin;;
+			  -> rrel_1: rrel_fixed: rrel_scp_var: _nrel_node;;
+			  -> rrel_2: rrel_fixed: rrel_scp_const: nrel_value;;
+
+			  => nrel_then: .proc_check_operator5A;;//Если элементы одинаковые, то всё прекрасно. Переход в начало ЦИКЛА
+			  => nrel_else: .proc_check_operator11;;//Сообщение об ошибке
+		*);; 
+
+	//5.f) Проверяем, является ли найденный узел идентификацией какого-либо узла. Если да, то пропускаем его.
+	-> .proc_check_operator5F 
+		(*
+			  <- searchElStr5;;
+			  -> rrel_1: rrel_assign: rrel_scp_var: _some_node;;
+			  -> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _binary_arc;;
+			  -> rrel_3: rrel_fixed: rrel_scp_var: _found_node;;
+			  -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			  -> rrel_5: rrel_fixed: rrel_scp_const: nrel_identification;;
+
+			  => nrel_then: .proc_check_operator5G;;
+			  => nrel_else: .proc_check_operator5I;;//ЗАносим в _valueless
+		*);;
+
+	//5.g) Проверка наличия nrel'а в _nrel_container. 
+	-> .proc_check_operator5G 
+		(*
+			  <- searchElStr3;;
+			  -> rrel_1: rrel_fixed: rrel_scp_var: _nrel_container;;
+			  -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			  -> rrel_3: rrel_assign: rrel_scp_var: _nrel_node;;
+
+		          => nrel_then: .proc_check_operator5H;;//Если уже там что-то существует
+			  => nrel_else: .proc_check_operator5G_A;;//Если _nrel_container пуст
+		*);;
+
+	//5.g.a) Заносим nrel_identification в _nrel_container
+	-> .proc_check_operator5D_A 
+		(*
+			  <- genElStr3;;
+			  -> rrel_1: rrel_fixed: rrel_scp_var: _nrel_container;;
+			  -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			  -> rrel_3: rrel_fixed: rrel_scp_const: nrel_identification;;
+
+			  => nrel_goto: .proc_check_operator5A;;//В начало цикла
+		*);; 
+
+	//5.h) Если nrel'ы у каких либо членов уравнения разные, то тест фэйловый
+	-> .proc_check_operator5H 
+		(*
+			  <- ifCoin;;
+			  -> rrel_1: rrel_fixed: rrel_scp_var: _nrel_node;;
+			  -> rrel_2: rrel_fixed: rrel_scp_const: nrel_identification;;
+
+			  => nrel_then: .proc_check_operator5A;;//Если элементы одинаковые, то всё прекрасно. Переход в начало ЦИКЛА
+			  => nrel_else: .proc_check_operator11;;//Сообщение об ошибке
+		*);; 
+                 
+	//5.i) Заносим найденный (числовой) узел в "незначащий" узел
+	-> .proc_check_operator5I 
+		(*
+			  <- genElStr3;;
+			  -> rrel_1: rrel_fixed: rrel_scp_var: _valueless;;
+			  -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			  -> rrel_3: rrel_fixed: rrel_scp_var: _found_node;;
+
+			  => nrel_goto: .proc_check_operator5A;;
+		*);; 
+	//<Конец ЦИКЛА>
+
+	//6. Переходим к работе с множеством неизвестных переменных. Выше мы всё пытались запихнуть туда какие-нибудь узлы
+	//Если множество переменных пустое, то РЕТУРН (Получается, что все переменные в уравнении известны)
+	-> .proc_check_operator6
+		(*
+			  <- searchElStr3;;
+			  -> rrel_1: rrel_fixed: rrel_scp_var: _valueless;;
+			  -> rrel_2: rrel_assign:  rrel_pos_const_perm: rrel_scp_var: _arc;; 
+			  -> rrel_3: rrel_assign: rrel_scp_var: _valueless_node_no1;;
+
+			  => nrel_then: .proc_check_operator7;;
+			  => nrel_else: .proc_check_operator12;;//Сообщение об ошибке
+		*);;
+	
+	//7. Удаляем ребро, связывающее множество "незначащих" узлов и "незначащий" узел
+	-> .proc_check_operator7
+		(*
+			 <- eraseEl;;
+			 -> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _arc;;
+
+			 => nrel_goto: .proc_check_operator8;;
+		 *);;
+
+
+	//8. Пытаемся найти второй узел во множестве "незначащих" узлов
+	-> .proc_check_operator8
+		(*
+			  <- searchElStr3;;
+			  -> rrel_1: rrel_fixed: rrel_scp_var: _valueless;;
+			  -> rrel_2: rrel_assign:  rrel_pos_const_perm: rrel_scp_var: _arc;; 
+			  -> rrel_3: rrel_assign: rrel_scp_var: _valueless_node_no2;;
+
+			  => nrel_then: .proc_check_operator10;;//Сообщение об ошибке
+			  => nrel_else: .proc_check_operator9;;//Всё замечательно! В ответ записывается неизвестная переменная.
+		*);;
+
+	//9. Если во множестве "незначащих" узлов был только 1 узел, а не 2, то этот найденный узел записывается в ответ.
+	//Т.к. если бы нашлось 2 узла или более, то получается что у уравнения более одной неизвестной. А такое решить нельзя
+	-> .proc_check_operator9 
+		(*
+			  <- genElStr3;;
+			  -> rrel_1: rrel_fixed: rrel_scp_var: _answer;;
+			  -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			  -> rrel_3: rrel_fixed: rrel_scp_var: _valueless_node_no1;;
+
+			  => nrel_goto: .proc_check_operator15;;//Очистка памяти от ненужного
+		*);; 
+
+	//10. Сообщение об ошибке
+	-> .proc_check_operator10
+		(*
+			 <- printNl;;
+			 -> rrel_1: rrel_fixed: rrel_scp_const: [ОШИБКА. В тестовом примере более одной неизвестной переменной];;
+
+			 => nrel_goto: .proc_check_operator15;;
+		 *);;
+
+	-> .proc_check_operator11  
+		(*
+			 <- printNl;;
+			 -> rrel_1: rrel_fixed: rrel_scp_const: [ОШИБКА. В тестовом примере присутствуют члены как с единицами измерения, так и без них. ];;
+
+			 => nrel_goto: .proc_check_operator15;;
+		 *);;
+
+	-> .proc_check_operator12  
+		(*
+			 <- printNl;;
+			 -> rrel_1: rrel_fixed: rrel_scp_const: [ОШИБКА. В тестовом примере отсутствуют неизвестные переменные.];;
+
+			 => nrel_goto: .proc_check_operator15;;
+		 *);;
+
+	-> .proc_check_operator13  
+		(*
+			 <- printNl;;
+			 -> rrel_1: rrel_fixed: rrel_scp_const: [ОШИБКА. В тестовом примере отсутствует узел суммы.];;
+
+			 => nrel_goto: .proc_check_operator16;;
+		 *);;
+
+	//14. Сообщение об ошибке
+	-> .proc_check_operator14  
+		(*
+			 <- printNl;;
+			 -> rrel_1: rrel_fixed: rrel_scp_const: [ОШИБКА. В тестовом примере отсутствуют слагаемые];;
+
+			 => nrel_goto: .proc_check_operator16;;
+		 *);;
+
+	//15. Удаление "Множества слагаемых"
+	-> .proc_check_operator15
+		(*
+			 <- eraseEl;;
+			 -> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _review_of_found_nodes;;
+
+			 => nrel_goto: .proc_check_operator16;;
+		 *);;
+
+	//16. Удаление "nrel контейнера"
+	-> .proc_check_operator16
+		(*
+			 <- eraseEl;;
+			 -> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _nrel_container;;
+
+			 => nrel_goto: .proc_check_operator17;;
+		 *);;
+
+	//17. Удаление "Множества неизвестных переменных"
+	-> .proc_check_operator17
+		(*
+			 <- eraseEl;;
+			 -> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _valueless;;
+
+			 => nrel_goto: .proc_check_operator_return;;
+		 *);;
+
+	-> .proc_check_operator_return 
+		(*
+			<- return;;
+		*);;
+	*);;
+*);;

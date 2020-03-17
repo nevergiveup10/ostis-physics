@@ -1,0 +1,62 @@
+sc_node_not_relation -> Figur;;
+Figur <- geometry;;
+
+Figur=>nrel_main_idtf:
+[фигур](*<-lang_ru;;*);
+[figur](*<-lang_en;;*);;
+
+sc_node_not_relation -> concept_set_of_variables;;
+concept_set_of_variables => nrel_main_idtf:
+[множество величин](*<-lang_ru;;*);
+[set of variables](*<-lang_en;;*);;
+
+sc_node_not_relation -> geometry;;
+geometry => nrel_main_idtf:
+[геометрия](*<-lang_ru;;*);
+[geometry](*<-lang_en;;*);;
+
+nrel_identification
+<- sc_node_norole_relation;
+=> nrel_main_idtf: [отношение идентификации*] (*<-lang_ru;;*);;
+
+nrel_square
+<- sc_node_norole_relation;
+=> nrel_main_idtf: [площадь*] (*<-lang_ru;;*);;
+
+nrel_value
+<- sc_node_norole_relation;
+=> nrel_main_idtf: [значение*] (*<-lang_ru;;*);;
+
+rrel_decimal
+<- sc_node_role_relation;
+=> nrel_main_idtf: [десятичное число'] (*<-lang_ru;;*);;
+
+rrel_sm
+<- sc_node_role_relation;
+=> nrel_main_idtf: [см'] (*<-lang_ru;;*);;
+
+rrel_m
+<- sc_node_role_relation;
+=> nrel_main_idtf: [м'] (*<-lang_ru;;*);;
+
+Figur => nrel_square:
+...
+ (* <= nrel_value:
+		 ...
+		 (* -> rrel_m:
+ 				...
+				(* <= nrel_identification:
+						...
+						(* -> rrel_decimal: [74];; *);;
+				*);;
+		   -> rrel_sm:
+				 ...
+				 (* <= nrel_identification:
+							 ...
+							 (* -> rrel_decimal: [89];; *);;
+				 *);;
+		 *);;
+ *);;
+
+ 
+

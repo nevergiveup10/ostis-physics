@@ -1,0 +1,109 @@
+scp_program ->proc_findingrvalue125 (*	
+-> rrel_params: .proc_findingrvalue125_params 
+(*
+	-> rrel_1: rrel_in: _VALUE_NODE;;
+	-> rrel_2: rrel_in: _node_which_will_contain_rrels;;
+	-> rrel_3: rrel_in: _node_which_will_contain_numbers;;
+*);;
+	
+-> rrel_operators: .proc_findingrvalue125_operator_set (*                       
+               
+	//1. Заверяемся, что VALUE_NODE - это узел со значением  
+	-> rrel_init: .proc_findingrvalue125_operator1 
+		(*
+			<- searchElStr5;;
+
+			-> rrel_1: rrel_assign: rrel_scp_var: _SOME_NODE;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _BINARY_ARC;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _VALUE_NODE;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _ARC;; 
+			-> rrel_5: rrel_fixed: rrel_scp_const: nrel_value;;
+
+			=> nrel_then: .proc_findingrvalue125_operator2;;
+			=> nrel_else: .proc_findingrvalue125_operator_return;;
+		*);; 
+
+	//2. Поиск 5-элементной конструкции
+	-> .proc_findingrvalue125_operator2 
+		(*
+			  <- searchElStr5;;
+
+			  -> rrel_1: rrel_fixed: rrel_scp_var: _SOME_NODE;;
+			  -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _ARC1;; 
+			  -> rrel_3: rrel_assign: rrel_scp_var: _IDENTIFICATION_NODE;;
+			  -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _ARC2;; 
+			  -> rrel_5: rrel_assign: rrel_scp_var: _RREL_NODE;;
+	 
+			  => nrel_then: .proc_findingrvalue125_operator2a;;
+			  => nrel_else: .proc_findingrvalue125_operator_return;;
+		*);;
+                      
+	//3. Записываем в "тот" узел rrel единицы измерения и помечаем его как первый
+	-> .proc_findingrvalue125_operator2a  
+		(*
+			  <- genElStr5;;
+			  -> rrel_1: rrel_fixed: rrel_scp_var: _node_which_will_contain_rrels;;
+			  -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _ARC1;;
+			  -> rrel_3: rrel_fixed: rrel_scp_var: _RREL_NODE;;
+			  -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _ARC2;;
+			  -> rrel_5: rrel_fixed: rrel_scp_const: rrel_first;;
+
+			  => nrel_goto: .proc_findingrvalue125_operator3;;
+		*);;	
+
+        //4. Находим узел, содержащий n-ичное число  	
+	-> .proc_findingrvalue125_operator3 
+		(*
+			  <- searchElStr5;;
+
+			  -> rrel_1: rrel_assign: rrel_scp_var: _node_with_a_number;;
+			  -> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _BINARY_ARC;;
+			  -> rrel_3: rrel_fixed: rrel_scp_var: _IDENTIFICATION_NODE;;
+			  -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _ARC;; 
+			  -> rrel_5: rrel_fixed: rrel_scp_const: nrel_identification;;
+
+			  => nrel_then: .proc_findingrvalue125_operator4;;
+			  => nrel_else: .proc_findingrvalue125_operator_return;;
+		*);;
+
+	       
+	//5. В "тот" узел заносим все числовые значения
+	-> .proc_findingrvalue125_operator4 
+		(*
+			  <- searchSetStr5;;
+
+			  -> rrel_1: rrel_fixed: rrel_scp_var: _node_with_a_number;;
+			  -> rrel_2: rrel_assign:  rrel_pos_const_perm: rrel_scp_var: _ARC1;; 
+			  -> rrel_3: rrel_assign: rrel_scp_var: _number;;
+			  -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _ARC2;; 
+			  -> rrel_5: rrel_assign: rrel_scp_var: _rrel_of_a_number_type;;
+
+			  -> rrel_set_3: rrel_fixed: rrel_scp_var: _node_which_will_contain_numbers;;
+
+			  => nrel_then: .proc_findingrvalue125_operator5;;
+			  => nrel_else: .proc_findingrvalue125_operator_return;;
+		*);;
+
+
+	//6. Записываем в "тот" узел rrel типа числа и помечаем его как второй
+	-> .proc_findingrvalue125_operator5  
+		(*
+			  <- genElStr5;;
+			  -> rrel_1: rrel_fixed: rrel_scp_var: _node_which_will_contain_rrels;;
+			  -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _ARC1;;
+			  -> rrel_3: rrel_fixed: rrel_scp_var: _rrel_of_a_number_type;;
+			  -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _ARC2;;
+			  -> rrel_5: rrel_fixed: rrel_scp_const: rrel_second;;
+
+			  => nrel_goto: .proc_findingrvalue125_operator_return;;
+		*);;	
+
+
+	-> .proc_findingrvalue125_operator_return 
+		(*
+		  	  <- return;;
+		*);;
+	*);;
+*);;                                
+
+

@@ -1,0 +1,107 @@
+scp_program -> proc_genera_sum (*	
+-> rrel_params: .proc_genera_sum_params 
+(*
+	-> rrel_1: rrel_in: _VALUELESS_NODE;;//Сюда передаётся неизвестная уравнения
+	-> rrel_2: rrel_in: _RREL_NODES;;//Тип числа и единица измерения из узла суммы
+	-> rrel_3: rrel_in: _EMPTY_NODE;;//Пустой узел
+*);;
+
+-> rrel_operators: .proc_genera_sum_operator_set (*
+
+	//1. Генерируем узел, от которого будет идти nrel_value к неизвестной уравнения
+	-> rrel_init: .proc_genera_sum_operator1
+		(*
+			 <- genEl;;
+			 -> rrel_1: rrel_assign: rrel_const: rrel_node: rrel_scp_var: _SOME_NODE;;
+
+			 => nrel_goto: .proc_genera_sum_operator2;;
+		 *);;
+                     
+
+	//2. Генерируем с неизвестной переменной уравнения конструкцию с nrel_value
+	-> .proc_genera_sum_operator2 (*
+		  <- genElStr5;;
+		  -> rrel_1: rrel_fixed: rrel_scp_var: _SOME_NODE;;
+		  -> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _BINARY_ARC;;
+		  -> rrel_3: rrel_fixed: rrel_scp_var: _VALUELESS_NODE;;
+		  -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _ARC;;
+		  -> rrel_5: rrel_fixed: rrel_scp_const: nrel_value;;
+
+		  => nrel_goto: .proc_genera_sum_operator3;;
+		*);;
+
+	//3. Находим единицу измерения, которую мы записали в RREL_NODES заранее
+	-> .proc_genera_sum_operator3 (*
+		  <- searchElStr5;;
+		  -> rrel_1: rrel_fixed: rrel_scp_var: _RREL_NODES;;
+		  -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _ARC1;;
+		  -> rrel_3: rrel_assign: rrel_scp_var: _measurement_rrel;;//rrel единицы измерения
+                  -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _ARC2;;
+                  -> rrel_5: rrel_fixed: rrel_scp_const: rrel_first;;
+
+		  => nrel_then: .proc_genera_sum_operator4;;
+		  => nrel_else: .proc_genera_sum_operator_return;;
+		*);; 
+
+	//4. Генерируем узел, к которому будет вести стрелка rrel - единица измерения
+	-> .proc_genera_sum_operator4 (*
+		 <- genEl;;
+		 -> rrel_1: rrel_assign: rrel_const: rrel_node: rrel_scp_var: _IDENTIFICATION_NODE;;
+
+		 => nrel_goto: .proc_genera_sum_operator5;;
+		 *);;
+
+	//5. Генерим конструкцию с rrel - единицей измерения   
+	-> .proc_genera_sum_operator5 (*
+		  <- genElStr5;;
+		  -> rrel_1: rrel_fixed: rrel_scp_var: _SOME_NODE;;
+		  -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _ARC1;;
+		  -> rrel_3: rrel_fixed: rrel_scp_var: _IDENTIFICATION_NODE;;
+		  -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _ARC2;;
+		  -> rrel_5: rrel_fixed: rrel_scp_var: _measurement_rrel;;//единица измерения
+
+		  => nrel_goto: .proc_genera_sum_operator6;;
+		*);; 
+
+	//6. Генерируем узел, который будет содержать число определённого типа (двоичное, десятичное или др.)
+	-> .proc_genera_sum_operator6 (*
+		 <- genEl;;
+		 -> rrel_1: rrel_assign: rrel_const: rrel_node: rrel_scp_var: _NODE_WITH_A_CERTAIN_TYPE_NUMBER;;
+
+		 => nrel_goto: .proc_genera_sum_operator7;;
+		 *);;
+
+	//7. Строим конструкцию с nrel_identification
+	-> .proc_genera_sum_operator7 (*
+		  <- genElStr5;;
+		  -> rrel_1: rrel_fixed: rrel_scp_var: _NODE_WITH_A_CERTAIN_TYPE_NUMBER;;
+		  -> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _BINARY_ARC;;
+		  -> rrel_3: rrel_fixed: rrel_scp_var: _IDENTIFICATION_NODE;;
+		  -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _ARC;;
+		  -> rrel_5: rrel_fixed: rrel_scp_const: nrel_identification;;
+
+		  => nrel_goto: .proc_genera_sum_operator8;;
+		*);;
+
+	//8. Теперь ищем нами сгенерированный узел, который будет содержать число определённого типа, и заносим его в _EMPTY_NODE
+	-> .proc_genera_sum_operator8 (*
+		  <- searchSetStr5;;
+
+		  -> rrel_1: rrel_assign: rrel_scp_var: _node_which_is_supposed_to_be_the_node_with_a_certain_type_number;;
+		  -> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _BINARY_ARC;; 
+		  -> rrel_3: rrel_fixed: rrel_scp_var: _IDENTIFICATION_NODE;;
+                  -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _ARC;;
+		  -> rrel_5: rrel_fixed: rrel_scp_const: nrel_identification;;
+
+		  -> rrel_set_1: rrel_fixed: rrel_scp_var: _EMPTY_NODE;;
+
+		  => nrel_goto: .proc_genera_sum_operator_return;;
+		*);;
+
+
+		-> .proc_genera_sum_operator_return (*
+		<- return;;
+		*);;
+	*);;
+*);;
+

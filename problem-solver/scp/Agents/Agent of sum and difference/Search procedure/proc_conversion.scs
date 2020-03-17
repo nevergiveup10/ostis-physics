@@ -1,0 +1,454 @@
+scp_program -> proc_conversion (*	
+-> rrel_params: proc_conversion_params 
+(*
+	-> rrel_1: rrel_in: _param;;
+	-> rrel_2: rrel_in: _answer;;
+*);;
+
+-> rrel_operators: .proc_conversion_operator_set 
+(*
+
+	//1. В параметре, заданном пользователем, находим узел суммы (слагаемое1 + слагаемое2 = сумма)
+	-> rrel_init: .proc_conversion_operator
+		(*
+			<- searchElStr3;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _param;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _binary_arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _sum_node;;
+		        
+		        => nrel_then: .proc_conversion_operator2;;
+			=> nrel_else: .proc_conversion_operator_fail;;
+		*);;  
+
+	//2. Проверяем, является ли найденное число значением какого-либо узла
+	-> .proc_conversion_operator2
+		(*
+			  <- searchElStr5;;
+			  -> rrel_1: rrel_assign: rrel_scp_var: _some_node;;
+			  -> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _binary_arc;;
+			  -> rrel_3: rrel_fixed: rrel_scp_var: _sum_node;;
+		          -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+		          -> rrel_5: rrel_fixed: rrel_scp_const: nrel_value;;
+
+			  => nrel_then: .proc_conversion_operator3;;			
+			  => nrel_else: .proc_conversion_operator2A;;
+		*);; 
+
+	//2.a) Если члены уравнения - обычные числа, то здесь нечего конвертировать. РЕТУРН
+	-> .proc_conversion_operator2A
+		(*
+			  <- searchElStr5;;
+			  -> rrel_1: rrel_assign: rrel_scp_var: _some_node;;
+			  -> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _binary_arc;;
+			  -> rrel_3: rrel_fixed: rrel_scp_var: _sum_node;;
+		          -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+		          -> rrel_5: rrel_fixed: rrel_scp_const: nrel_identification;;
+
+			  => nrel_then: .proc_conversion_operator_return;;
+			  => nrel_else: .proc_conversion_operator15;;//Если сумма неизвестна, то переход к поиску слагаемых			
+		*);; 
+
+	//3. Находим конструкцию с единицей измерения
+	-> .proc_conversion_operator3
+		(*
+			  <- searchElStr5;;
+			  -> rrel_1: rrel_fixed: rrel_scp_var: _some_node;;
+			  -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc_which_have_to_be_saved_2;;
+			  -> rrel_3: rrel_assign: rrel_scp_var: _identification_node;;
+		          -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc_which_have_to_be_saved_1;;
+		          -> rrel_5: rrel_assign: rrel_scp_var: _unit_of_measurement;;//rrel-единица измерения
+
+			  => nrel_then: .proc_conversion_operator4;;
+			  => nrel_else: .proc_conversion_operator_fail;;
+		*);; 
+
+	//4. Выясняем, что измеряет данная единица измерения (массу, скорость, либо что-то другое)
+	-> .proc_conversion_operator4
+		(*
+			<- searchElStr5;;
+			-> rrel_1: rrel_assign: rrel_scp_var: _class_of_the_unit_of_measurement;;//показывает, что мы измеряем
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _unit_of_measurement;;//rrel-единица измерения
+		        -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		        -> rrel_5: rrel_fixed: rrel_scp_const: rrel_specific_unit_of_measurement;;
+
+			=> nrel_then: .proc_conversion_operator5;;
+			=> nrel_else: .proc_conversion_operator_fail;;
+		*);; 
+
+	//5. Находим единицу измерения СИ
+	-> .proc_conversion_operator5
+		(*
+			<- searchElStr5;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _class_of_the_unit_of_measurement;;//показывает, что мы измеряем
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _binary_arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _SI_unit_of_measurement;;//единица измерения СИ
+		        -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+		        -> rrel_5: rrel_fixed: rrel_scp_const: nrel_international_system_of_units;;
+
+			=> nrel_then: .proc_conversion_operator6;;
+			=> nrel_else: .proc_conversion_operator_fail;;
+		*);; 
+
+	//6. Проверяем, совпадает ли наша единица измерения с единицей измерения СИ
+	-> .proc_conversion_operator6
+		(*
+			  <- ifCoin;;
+			  -> rrel_1: rrel_fixed: rrel_scp_var: _unit_of_measurement;;
+			  -> rrel_2: rrel_fixed: rrel_scp_var: _SI_unit_of_measurement;;
+
+			  => nrel_then: .proc_conversion_operator15;;//Если совпадает, то переходим к слагаемым
+			  => nrel_else: .proc_conversion_operator7;;//Если не совпадает, то начинаем конвертацию
+		*);; 
+
+	//7. Удаляем ребро, связывающее исходную единицу измерения и _arc_which_have_to_be_saved_2
+	-> .proc_conversion_operator7
+		(*
+			 <- eraseEl;;
+			 -> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _arc_which_have_to_be_saved_1;;
+
+			 => nrel_goto: .proc_conversion_operator8;;
+		*);;
+
+	//8. Связываем единицу измерения СИ и _arc_which_have_to_be_saved_2
+	-> .proc_conversion_operator8
+		(*
+			<- genElStr3;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _SI_unit_of_measurement;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_fixed: rrel_pos_const_perm: rrel_scp_var: _arc_which_have_to_be_saved_2;;
+
+			=> nrel_goto: .proc_conversion_operator9;;
+		*);;
+
+	//9. Находим предпоследний узел
+	-> .proc_conversion_operator9
+		(*
+			<- searchElStr5;;
+			-> rrel_1: rrel_assign: rrel_scp_var: _some_node;; //предпоследний узел
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _binary_arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _identification_node;;
+		        -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+		        -> rrel_5: rrel_fixed: rrel_scp_const: nrel_identification;;
+
+			=> nrel_then: .proc_conversion_operator10;;
+			=> nrel_else: .proc_conversion_operator_fail;;
+		*);; 
+
+	//10. Находим число и его тип
+	-> .proc_conversion_operator10
+		(*
+			<- searchElStr5;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _some_node;;//предпоследний узел
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _number;;//число
+		        -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		        -> rrel_5: rrel_assign: rrel_scp_var: _rrel_type_of_a_number;;//тип числа
+
+			=> nrel_then: .proc_conversion_operator11;;
+			=> nrel_else: .proc_conversion_operator_fail;;
+		*);; 
+
+	//11. Находим связь между исходной единицей измерения и установленной единицей измерения СИ
+	-> .proc_conversion_operator11
+		(*
+			<- searchElStr5;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _unit_of_measurement;;//исходная единица измерения
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _binary_arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _SI_unit_of_measurement;;//единица измерения СИ
+		        -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+		        -> rrel_5: rrel_assign: rrel_scp_var: _nrel_node;;
+
+			=> nrel_then: .proc_conversion_operator12;;
+			=> nrel_else: .proc_conversion_operator_fail;;
+		*);; 
+
+	//12. Находим узел, содержащий мультипликатор
+	-> .proc_conversion_operator12
+		(*
+			<- searchElStr5;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _nrel_node;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _binary_arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _multiplicator_container;;//узел, содержащий мультипликатор
+		        -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+		        -> rrel_5: rrel_fixed: rrel_scp_const: nrel_multiplicator;;
+
+			=> nrel_then: .proc_conversion_operator13;;
+			=> nrel_else: .proc_conversion_operator_fail;;
+		*);; 
+
+	//13. Находим мультипликатор
+	-> .proc_conversion_operator13
+		(*
+			<- searchElStr3;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _multiplicator_container;;//исходная единица измерения
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _multiplicator;;//узел, содержащий мультипликатор
+		        -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		        -> rrel_5: rrel_fixed: rrel_scp_var: _rrel_type_of_a_number;;
+
+			=> nrel_goto: .proc_conversion_operator14;;
+		*);; 
+
+	//14. Процесс конвертации
+	-> .proc_conversion_operator14 (*
+                  <- contMult;;
+                   -> rrel_1: rrel_fixed: rrel_scp_var: _number;;
+                   -> rrel_2: rrel_fixed: rrel_scp_var: _multiplicator;;
+		   -> rrel_3: rrel_fixed: rrel_scp_var: _number;;
+         		
+                    => nrel_goto: .proc_conversion_operator15;;
+		   *);;
+
+	//15. Заносим слагаемые во "Множество слагаемых"
+	-> .proc_conversion_operator15 
+		(*
+			<- searchSetStr3;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _param;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _summand;;
+		        
+			-> rrel_set_3: rrel_assign: rrel_scp_var: _set_of_summands;;
+
+		        => nrel_goto: .proc_conversion_operator16;;
+		*);;
+
+	//<НАЧАЛО ЦИКЛА>
+	//16.a) Начинаем по одному обрабатывать найденные узлы
+	-> .proc_conversion_operator16
+		(*
+			  <- searchElStr3;;
+
+			  -> rrel_1: rrel_fixed: rrel_scp_var: _set_of_summands;;
+			  -> rrel_2: rrel_assign:  rrel_pos_const_perm: rrel_scp_var: _arc;; 
+			  -> rrel_3: rrel_assign: rrel_scp_var: _summand;;
+
+			  => nrel_then: .proc_conversion_operator17;;
+			  => nrel_else: .proc_conversion_operator31;;//Завершение процедуры
+
+		*);;
+
+	//17. Удаляем ребро, связывающее "Множество слагаемых" и найденное слагаемое
+	-> .proc_conversion_operator17 
+		(*
+			 <- eraseEl;;
+			 -> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _arc;;
+
+			 => nrel_goto: .proc_conversion_operator18;;
+		*);;
+
+	//18. Проверяем, является ли найденное слагаемое числовым значением с единицей измерения
+	-> .proc_conversion_operator18 
+		(*
+			  <- searchElStr5;;
+			  -> rrel_1: rrel_assign: rrel_scp_var: _some_node;;
+			  -> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _binary_arc;;
+			  -> rrel_3: rrel_fixed: rrel_scp_var: _summand;;
+		          -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+		          -> rrel_5: rrel_fixed: rrel_scp_const: nrel_value;;
+
+			  => nrel_then: .proc_conversion_operator19;;
+			  => nrel_else: .proc_conversion_operator18A;;//Проверка на наличие связи с nrel_identification
+		*);;
+
+	//18.a) Проверяем, является ли найденный узел идентификацией какого-либо узла.
+	-> .proc_conversion_operator18A 
+		(*
+			  <- searchElStr5;;
+			  -> rrel_1: rrel_assign: rrel_scp_var: _some_node;;
+			  -> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _binary_arc;;
+			  -> rrel_3: rrel_fixed: rrel_scp_var: _summand;;
+			  -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			  -> rrel_5: rrel_fixed: rrel_scp_const: nrel_identification;;
+
+			  => nrel_then: .proc_conversion_operator31;;//Если да, то тут нечего конвертировать. Завершение процедуры
+			  => nrel_else: .proc_conversion_operator16;;//Если нет, то переход к следующему слагаемому
+		*);;
+
+//================================================================================================================================
+
+	//19. Находим конструкцию с единицей измерения
+	-> .proc_conversion_operator19
+		(*
+			  <- searchElStr5;;
+			  -> rrel_1: rrel_fixed: rrel_scp_var: _some_node;;
+			  -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc_which_have_to_be_saved_2;;
+			  -> rrel_3: rrel_assign: rrel_scp_var: _identification_node;;
+		          -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc_which_have_to_be_saved_1;;
+		          -> rrel_5: rrel_assign: rrel_scp_var: _unit_of_measurement;;//rrel-единица измерения
+
+			  => nrel_then: .proc_conversion_operator20;;
+			  => nrel_else: .proc_conversion_operator_fail1;;
+		*);; 
+
+	//20. Выясняем, что измеряет данная единица измерения (массу, скорость, либо что-то другое)
+	-> .proc_conversion_operator20
+		(*
+			<- searchElStr5;;
+			-> rrel_1: rrel_assign: rrel_scp_var: _class_of_the_unit_of_measurement;;//показывает, что мы измеряем
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _unit_of_measurement;;//rrel-единица измерения
+		        -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		        -> rrel_5: rrel_fixed: rrel_scp_const: rrel_specific_unit_of_measurement;;
+
+			=> nrel_then: .proc_conversion_operator21;;
+			=> nrel_else: .proc_conversion_operator_fail1;;
+		*);; 
+
+	//21. Находим единицу измерения СИ
+	-> .proc_conversion_operator21
+		(*
+			<- searchElStr5;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _class_of_the_unit_of_measurement;;//показывает, что мы измеряем
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _binary_arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _SI_unit_of_measurement;;//единица измерения СИ
+		        -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+		        -> rrel_5: rrel_fixed: rrel_scp_const: nrel_international_system_of_units;;
+
+			=> nrel_then: .proc_conversion_operator22;;
+			=> nrel_else: .proc_conversion_operator_fail1;;
+		*);; 
+
+	//22. Проверяем, совпадает ли наша единица измерения с единицей измерения СИ
+	-> .proc_conversion_operator22
+		(*
+			  <- ifCoin;;
+			  -> rrel_1: rrel_fixed: rrel_scp_var: _unit_of_measurement;;
+			  -> rrel_2: rrel_fixed: rrel_scp_var: _SI_unit_of_measurement;;
+
+			  => nrel_then: .proc_conversion_operator16;;//Если совпадает, то переходим к слагаемым
+			  => nrel_else: .proc_conversion_operator23;;//Если не совпадает, то начинаем конвертацию
+		*);; 
+
+	//23. Удаляем ребро, связывающее исходную единицу измерения и _arc_which_have_to_be_saved_2
+	-> .proc_conversion_operator23
+		(*
+			 <- eraseEl;;
+			 -> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _arc_which_have_to_be_saved_1;;
+
+			 => nrel_goto: .proc_conversion_operator24;;
+		*);;
+
+	//24. Связываем единицу измерения СИ и _arc_which_have_to_be_saved_2
+	-> .proc_conversion_operator24
+		(*
+			<- genElStr3;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _SI_unit_of_measurement;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+			-> rrel_3: rrel_fixed: rrel_pos_const_perm: rrel_scp_var: _arc_which_have_to_be_saved_2;;
+
+			=> nrel_goto: .proc_conversion_operator25;;
+		*);;
+
+	//25. Находим предпоследний узел
+	-> .proc_conversion_operator25
+		(*
+			<- searchElStr5;;
+			-> rrel_1: rrel_assign: rrel_scp_var: _some_node;; //предпоследний узел
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _binary_arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _identification_node;;
+		        -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+		        -> rrel_5: rrel_fixed: rrel_scp_const: nrel_identification;;
+
+			=> nrel_then: .proc_conversion_operator26;;
+			=> nrel_else: .proc_conversion_operator_fail1;;
+		*);; 
+
+	//26. Находим число и его тип
+	-> .proc_conversion_operator26
+		(*
+			<- searchElStr5;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _some_node;;//предпоследний узел
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _number;;//число
+		        -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		        -> rrel_5: rrel_assign: rrel_scp_var: _rrel_type_of_a_number;;//тип числа
+
+			=> nrel_then: .proc_conversion_operator27;;
+			=> nrel_else: .proc_conversion_operator_fail1;;
+		*);; 
+
+	//27. Находим связь между исходной единицей измерения и установленной единицей измерения СИ
+	-> .proc_conversion_operator27
+		(*
+			<- searchElStr5;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _unit_of_measurement;;//исходная единица измерения
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _binary_arc;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _SI_unit_of_measurement;;//единица измерения СИ
+		        -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+		        -> rrel_5: rrel_assign: rrel_scp_var: _nrel_node;;
+
+			=> nrel_then: .proc_conversion_operator28;;
+			=> nrel_else: .proc_conversion_operator_fail1;;
+		*);; 
+
+	//28. Находим узел, содержащий мультипликатор
+	-> .proc_conversion_operator28
+		(*
+			<- searchElStr5;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _nrel_node;;
+			-> rrel_2: rrel_assign: rrel_common: rrel_scp_var: _binary_arc;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _multiplicator_container;;//узел, содержащий мультипликатор
+		        -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+		        -> rrel_5: rrel_fixed: rrel_scp_const: nrel_multiplicator;;
+
+			=> nrel_then: .proc_conversion_operator29;;
+			=> nrel_else: .proc_conversion_operator_fail1;;
+		*);; 
+
+	//29. Находим мультипликатор
+	-> .proc_conversion_operator29
+		(*
+			<- searchElStr3;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _multiplicator_container;;//исходная единица измерения
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc1;;
+			-> rrel_3: rrel_assign: rrel_scp_var: _multiplicator;;//узел, содержащий мультипликатор
+		        -> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc2;;
+		        -> rrel_5: rrel_fixed: rrel_scp_var: _rrel_type_of_a_number;;
+
+			=> nrel_goto: .proc_conversion_operator30;;
+		*);; 
+
+	//30. Процесс конвертации
+	-> .proc_conversion_operator30 (*
+                  <- contMult;;
+                   -> rrel_1: rrel_fixed: rrel_scp_var: _number;;
+                   -> rrel_2: rrel_fixed: rrel_scp_var: _multiplicator;;
+		   -> rrel_3: rrel_fixed: rrel_scp_var: _number;;
+         		
+                    => nrel_goto: .proc_conversion_operator16;;//переход к следующему слагаемому
+		   *);;
+
+	//Удаление "Множества слагаемых"
+	-> .proc_conversion_operator31 
+		(*
+			<- eraseEl;;
+			-> rrel_1: rrel_erase: rrel_fixed: rrel_scp_var: _set_of_summands;;
+
+			=> nrel_goto: .proc_conversion_operator_return;;
+		*);;
+
+	//Сообщение об ошибке
+	-> .proc_conversion_operator_fail  
+		(*
+			 <- printNl;;
+			 -> rrel_1: rrel_fixed: rrel_scp_const: [ОШИБКА.];;
+
+			 => nrel_goto: .proc_conversion_operator_return;;
+		 *);;
+
+	//Сообщение об ошибке
+	-> .proc_conversion_operator_fail1  
+		(*
+			 <- printNl;;
+			 -> rrel_1: rrel_fixed: rrel_scp_const: [ОШИБКА.];;
+
+			 => nrel_goto: .proc_conversion_operator31;;
+		 *);;
+
+	-> .proc_conversion_operator_return 
+		(*
+			<- return;;
+		*);;
+	*);;
+*);;

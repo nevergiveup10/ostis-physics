@@ -1,0 +1,100 @@
+agent_lab
+=> nrel_main_idtf:
+	[агентная scp-программа манагера] (* <- lang_ru;; *);
+	[agent scp-program of manager] (* <- lang_en;; *);
+	<- agent_scp_program;;
+
+scp_program -> agent_lab (*
+	-> rrel_params: .agent_proc_lab_params (*
+		-> rrel_1: rrel_in: _event;;
+		-> rrel_2: rrel_in: _input_arc;;
+	*);;
+
+	-> rrel_operators: .agent_lab_operator_set (*
+		
+		-> rrel_init: .agent_proc_lab_operator1 (*
+		  <- searchElStr3;;
+		  -> rrel_1: rrel_assign: rrel_scp_var: _temp;;
+		  -> rrel_2: rrel_fixed: rrel_scp_var: _input_arc;;
+		  -> rrel_3: rrel_assign: rrel_scp_var: _quest;;
+
+		  => nrel_then: .agent_proc_lab_operator2;;
+		*);;
+
+                 -> .agent_proc_lab_operator2 (*
+		  <- printNl;;
+		  -> rrel_1: rrel_fixed: rrel_scp_const: [lab];;
+
+		  => nrel_goto: .agent_proc_lab_operator2a;;
+		*);;
+
+		 -> .agent_proc_lab_operator2a (*
+		  <- searchElStr3;;
+		  -> rrel_1: rrel_fixed: rrel_scp_const: question_lab;;
+		  -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+		  -> rrel_3: rrel_fixed: rrel_scp_var: _quest;;
+
+		  => nrel_then: .agent_proc_lab_operator3;;
+		  => nrel_else: .agent_proc_lab_operator_return;;
+		*);;
+
+                 -> .agent_proc_lab_operator3(*
+		 <- searchElStr3;;
+
+		 -> rrel_1: rrel_fixed: rrel_scp_var: _quest;;
+		 -> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc;;
+		 -> rrel_3: rrel_assign: rrel_scp_var: _connection;;
+
+                 => nrel_then: .agent_proc_lab_operator6;;
+                 *);;  
+	
+	        -> .agent_proc_lab_operator6 (*
+		  <- call;;
+		  -> rrel_1: rrel_fixed: rrel_scp_const: proc_lab;;
+		  -> rrel_2: rrel_fixed: rrel_scp_const: .agent_proc_lab_operator6_params (*
+				-> rrel_1: rrel_fixed: rrel_scp_var: _shtuka;;
+				//-> rrel_2: rrel_fixed: rrel_scp_var: _answer;;
+				-> rrel_2: rrel_fixed: rrel_scp_var: _connection;;
+			*);;
+		  -> rrel_3: rrel_assign: rrel_scp_var: _descr111;;
+
+		  => nrel_goto: .agent_proc_lab_operator7;;
+		*);;
+
+		-> .agent_proc_lab_operator7 (*
+		  <- waitReturn;;
+		  -> rrel_1: rrel_fixed: rrel_scp_var: _descr111;;
+
+		  => nrel_goto: .agent_proc_lab_operator_return;;
+		*);;                                                                                 
+					
+		 -> .agent_proc_lab_operator_return (*
+		  <- return;;
+		*);;
+	*);;
+*);;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
